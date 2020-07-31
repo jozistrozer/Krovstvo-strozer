@@ -44,8 +44,8 @@
 #noga{
     position: absolute;
     left:0;
-    bottom: 0;
     width: 100%;
+    margin-top: 100px;
 }
 
 .footer-header{
@@ -57,4 +57,21 @@
 .footer-header > .brand-name{
     display: inline;
     color: #BF202D;
+}
+
+hr.crta {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    width: 65%;
+    margin-bottom: 50px;
+}
+
+table th {
+    text-align: center;
+}
+
+.table {
+    margin: auto;
+    width: 50% !important;
 }
