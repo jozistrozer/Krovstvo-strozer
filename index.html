@@ -15,29 +15,91 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <!-- header -->
-
-    <!-- navigation -->
-    <div class="navbar navbar-default navbar-brand-center">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Krovstvo strožer</a>
-            </div>
-            <ul class="nav navbar-nav float-right">
-                <li class="active"><a href="index.html">Domov</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Galerija</a></li>
-                <li><a href="#">Povpraševanje</a></li>
-            </ul>
-        </div>
-    </div>
 </head>
 <body>
+    <!-- Navigacijska fleha -->
+    <div class="header"><nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand-centered"><img src="res/logotip.png" width="200" height="169" class="logo-img"></div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-brand-centered">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Domov</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Galerija</a></li>
+                        <li><a href="#">Povpraševanje</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><i class="fas fa-facebook"></i></a></li>
+                        <li><a href="#">M</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav></div>
+
+    <!-- Prikaz slik v vrstici z animacijo -->
+    <div id="slider" class="carousel slide" data-ride="carousel" style="width: 55%; margin: 7% auto auto;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="res/slider/1.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+            </div>
+
+            <div class="item">
+                <img src="res/slider/2.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+            </div>
+
+            <div class="item">
+                <img src="res/slider/3.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#slider" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Prejšnja</span>
+        </a>
+        <a class="right carousel-control" href="#slider" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Naslednja</span>
+        </a>
+    </div>
+
+    <!-- Sekcija na sredini strani z tekstom -->
+    <div id="sredinska_sekcija">
+        <h2 class="text-center">
+            STROŽER, kleparstvo in montaža, Žan Strožer s.p.
+        </h2>
+    </div>
+
 
 </body>
 
+<!-- Noga spletne strani -->
 <footer>
-
-
+    <nav class="navbar navbar-inverse" id="noga">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><div class="footer-header"><div class="brand-name">STROŽER</div>, kleparstvo in montaža, Žan Strožer s.p.</div></a>
+            </div>
+        </div>
+    </nav>
 </footer>
 </html>

@@ -1,0 +1,60 @@
+@media screen and (min-width:995px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
+
+.logo-img{
+    margin-right: 100px;
+}
+
+.navbar-nav > li > a{
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: black;
+}
+
+.carousel slide {
+    margin-top: 10%;
+}
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img{
+    width: 100%;
+}
+
+#sredinska_sekcija{
+    margin-top: 5%;
+}
+
+.navbar{
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#noga{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-header{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.footer-header > .brand-name{
+    display: inline;
+    color: #BF202D;
+}
