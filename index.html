@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://kit.fontawesome.com/d039170b1a.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -37,18 +38,18 @@
                         <li class="active"><a href="index.html">Domov</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                         <li><a href="galerija.php">Galerija</a></li>
-                        <li><a href="povprasevanje.html">Povpraševanje</a></li>
+                        <li><a href="povprasevanje.php">Povpraševanje</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-                        <li><a href="#">M</a></li>
+                        <li><a href="https://www.facebook.com/strozer.kleparstvomontaza" target="_blank"><i class="fab fa-facebook-square fa-1x"></i></a></li>
+                        <li><a href="mailto:strozer.zan@gmail.com"><i class="fas fa-envelope-square fa-1x"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav></div>
 
     <!-- Prikaz slik v vrstici z animacijo -->
-    <div id="slider" class="carousel slide" data-ride="carousel" style="width: 55%; margin: 7% auto auto;">
+    <div id="slider" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -59,15 +60,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="res/slider/1.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+                <img src="res/slider/1.jpg" alt="Krovstvo kleparstvo žan strožer s.p." style="height: 500px;">
             </div>
 
             <div class="item">
-                <img src="res/slider/2.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+                <img src="res/slider/2.jpg" alt="Krovstvo kleparstvo žan strožer s.p." style="height: 500px;">
             </div>
 
             <div class="item">
-                <img src="res/slider/3.jpg" alt="Krovstvo kleparstvo žan strožer s.p.">
+                <img src="res/slider/3.jpg" alt="Krovstvo kleparstvo žan strožer s.p." style="height: 500px;">
             </div>
         </div>
 
@@ -81,37 +82,91 @@
             <span class="sr-only">Naslednja</span>
         </a>
     </div>
-
+    <hr class="crta">
+    <h1 class="text-center">Naše podjetje že uspešno deluje z več kot 35 letno tradicijo.</h1>
+    <h3 class="text-center" style="margin-bottom: 35px;">Zagotavljamo kakovost in ugodne cene kar se tiče kleparskih in krovskih del.</h3>
+    <h4 class="text-center"><p>Smo mlad uspešen kolektiv, ki svoje znanje črpa iz bogate družinske tradicije.<br>
+        Ukvarjamo se s kleparstvom, krovstom, tesarstvom, montaža strelovodov in izdelavo kleparsko-gradbenih elementov.</h4>
     <!-- Sekcija na sredini strani z tekstom -->
-    <div id="sredinska_sekcija">
-        <h3 class="text-center" style="font-weight: bold">Kaj delamo?</h3>
-        
+    <div id="sredinska_sekcija_prva">
+        <table class="kajdelamo-tabela" align="center">
+            <thead>
+                <tr><td><h3 class="text-center" style="font-weight: bold; margin-bottom: 55px;">Kaj delamo?</h3></td></tr>
+            </thead>
+            <tr>
+                <td><img src="res/ikone/kleparska_dela.jpg" alt="Kleparska dela"></td>
+                <td><h4>Kleparska dela.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/krovska_dela.jpg" alt="Krovska dela"></td>
+                <td><h4>Krovska dela.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/tesarska_dela.jpg" alt="Tesarska dela"></td>
+                <td><h4>Tesarska dela.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/plocevinaste_strehe.jpg" alt="Pločevinaste strehe"></td>
+                <td><h4>Pločevinaste strehe.</h4></td>
+            </tr>
+        </table>
+        <div class="sredinska_crta" style="border: 1px solid #d3d3d3; height: 550px;"></div>
+        <table class="zagotavljamo-tabela" align="center">
+            <thead>
+            <tr><td><h3 class="text-center" style="font-weight: bold; margin-bottom: 55px;">Zagotavljamo.</h3></td></tr>
+            </thead>
+            <tr>
+                <td><img src="res/ikone/builder.jpg" alt="Profesionalen kolektiv"></td>
+                <td><h4>Profesionalen kolektiv.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/tools.jpg" alt="Kakovost"></td>
+                <td><h4>Kakovost.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/money.jpg" alt="Ugodno dostopne cene"></td>
+                <td><h4>Ugodno dostopne cene.</h4></td>
+            </tr>
+            <tr>
+                <td><img src="res/ikone/warranty.jpg" alt="Garancija"></td>
+                <td><h4>Garancija.</h4></td>
+            </tr>
+        </table>
+
     </div>
 
     <!-- ČRTA -->
     <hr class="crta">
-
-    <div id="tabela" class="container-fluid">
-        <table class="table table-bordered table-striped text-center">
-            <tr>
-                <td>Zagotavljamo</td>
-            </tr>
-            <tr>
-                <td>Kakovost</td>
-            </tr>
-            <tr>
-                <td>Ugodnost</td>
-            </tr>
-            <tr>
-                <td>Zagotavljamo</td>
-            </tr>
-        </table>
-    </div>
+    <h2 class="text-center"><i class="fas fa-hammer"></i> Menjavate streho in želite prejeti ponudbo?</h2>
+    <h3 class="text-center"><a href="povprasevanje.php">Pošlji povpraševanje</a></h3>
 
 </body>
 
 <!-- Noga spletne strani -->
 <footer>
+    <div class="partnerji">
+        <div class="partner">
+            <a href="https://www.creaton.si" target="_blank"><img src="res/partnerji/creaton.jpg" alt="Creaton"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.wienerberger.si" target="_blank"><img src="res/partnerji/tondach.jpg" alt="Tondach"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.gerardroofs.si/sl/" target="_blank"><img src="res/partnerji/gerard.jpg" alt="Gerard"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.salonit.si/" target="_blank"><img src="res/partnerji/salonit_anhovo.jpg" alt="Salonit Anhovo" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.velux.si/" target="_blank"><img src="res/partnerji/velux.jpg" alt="Velux" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="http://www.fakro.si/" target="_blank"><img src="res/partnerji/fakro.jpg" alt="Fakro" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="http://www.indap.si/" target="_blank"><img src="res/partnerji/indap.jpg" alt="Indap SKM"></a>
+        </div>
+    </div>
     <nav class="navbar navbar-inverse" id="noga">
         <div class="container-fluid">
             <div class="navbar-header">

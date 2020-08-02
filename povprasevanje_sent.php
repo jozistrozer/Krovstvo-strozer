@@ -36,9 +36,9 @@
         <div class="collapse navbar-collapse" id="navbar-brand-centered">
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Domov</a></li>
-                <li class="active"><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="galerija.php">Galerija</a></li>
-                <li><a href="povprasevanje.php">Povpraševanje</a></li>
+                <li class="active"><a href="povprasevanje.php">Povpraševanje</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://www.facebook.com/strozer.kleparstvomontaza" target="_blank"><i class="fab fa-facebook-square fa-1x"></i></a></li>
@@ -49,25 +49,17 @@
 </nav></div>
 
 <!-- Sredinska sekcija -->
+<?php
+$jeOK = $_GET["status"];
+if($jeOK == 1){
+echo "<h1 class='text-center'>Vaše povpraševanje je bilo uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.</h1>";
+echo "<h3 class='text-center' style='margin-bottom: 25%;'>Lahko si ogledate našo <a href='galerija.php'>galerijo</a> slik.</h3>";
+}else{
+echo "<h1 class='text-center' style='color: red;'>Prišlo je do napake. Poskusite ponovno. :(</h1>";
+echo "<h3 class='text-center' style='color: red;margin-bottom: 25%;'><a href='povprasevanje.php'>Izpolni povpraševanje.</h3>";
+}
 
-<!-- Sekcija na sredini strani z tekstom -->
-<div id="sredinska_sekcija">
-    <h2 class="text-center" style="margin-bottom: 5%;">Kontaktirajte nas in vam bomo z veseljem svetovali.</h2>
-    <h3 class="text-center"><i class="fas fa-phone-alt" style="margin-right: 25px;"></i> 040 - 803 - 652</h3>
-    <h3 class="text-center"><i class="fas fa-envelope-square fa-1x" style="margin-right: 25px;"></i> strozer.zan@gmail.com</h3>
-    <h3 class="text-center"><i class="fas fa-city" style="margin-right: 25px;"></i> Kasaze 69e, 3301 Petrovče</h3>
-</div>
-
-<!-- Google maps -->
-<div class="google-maps">
-    <div class="container-fluid">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.135261549372!2d15.194423515981123!3d46.22765477911747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47656e2857eb5555%3A0xb963c44f91cf5d3d!2sKasaze%2069e%2C%203301%20Petrov%C4%8De!5e0!3m2!1sen!2ssi!4v1596286641105!5m2!1sen!2ssi"
-                    width="950" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
-    </div>
-</div>
-
+?>
 
 </body>
 

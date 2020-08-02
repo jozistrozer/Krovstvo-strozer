@@ -15,8 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/galerija.css">
+    <script src="https://kit.fontawesome.com/d039170b1a.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-
 
 </head>
 <body>
@@ -40,15 +40,17 @@
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li class="active"><a href="galerija.php">Galerija</a></li>
-                <li><a href="povprasevanje.html">Povpraševanje</a></li>
+                <li><a href="povprasevanje.php">Povpraševanje</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-                <li><a href="#">M</a></li>
+                <li><a href="https://www.facebook.com/strozer.kleparstvomontaza" target="_blank"><i class="fab fa-facebook-square fa-1x"></i></a></li>
+                <li><a href="mailto:strozer.zan@gmail.com"><i class="fas fa-envelope-square fa-1x"></i></a></li>
             </ul>
         </div>
     </div>
 </nav></div>
+
+<h2 class="text-center" style="margin-bottom: 55px;">Oglejte si nekaj naših izdelkov.</h2>
 
 <!-- Galerija -->
 <div class="container-fluid-gallery">
@@ -76,6 +78,29 @@
 
 <!-- Noga spletne strani -->
 <footer>
+    <div class="partnerji">
+        <div class="partner">
+            <a href="https://www.creaton.si" target="_blank"><img src="res/partnerji/creaton.jpg" alt="Creaton"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.wienerberger.si" target="_blank"><img src="res/partnerji/tondach.jpg" alt="Tondach"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.gerardroofs.si/sl/" target="_blank"><img src="res/partnerji/gerard.jpg" alt="Gerard"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.salonit.si/" target="_blank"><img src="res/partnerji/salonit_anhovo.jpg" alt="Salonit Anhovo" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="https://www.velux.si/" target="_blank"><img src="res/partnerji/velux.jpg" alt="Velux" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="http://www.fakro.si/" target="_blank"><img src="res/partnerji/fakro.jpg" alt="Fakro" style="height: 50px"></a>
+        </div>
+        <div class="partner">
+            <a href="http://www.indap.si/" target="_blank"><img src="res/partnerji/indap.jpg" alt="Indap SKM"></a>
+        </div>
+    </div>
     <nav class="navbar navbar-inverse" id="noga">
         <div class="container-fluid">
             <div class="navbar-header">

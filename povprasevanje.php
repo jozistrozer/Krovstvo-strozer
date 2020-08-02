@@ -1,3 +1,38 @@
+<?php
+if(isset($_POST["poslji"])){
+    $ime = $_POST["ime"];
+    $priimek = $_POST["priimek"];
+    $telefon = $_POST["telefon"];
+    $email = $_POST["email"];
+    $naslov = $_POST["naslov"];
+    $posta_kraj = $_POST["posta_kraj"];
+    $opis_objekta = $_POST["opis_objekta"];
+
+    // Poslji posto
+
+    $to = "strozer.zan@gmail.com";
+    $subject = "Novo povpraševanje";
+    $txt = "Pridobili ste novo povpraševanje od: \n\r".
+            "Ime: " . $ime . "\n\r" .
+            "Priimek: " . $priimek . "\n\r" .
+            "Telefon: " . $telefon . "\n\r" .
+            "E-mail: " . $email . "\n\r" .
+            "Naslov: " . $naslov . "\n\r" .
+            "Posta in kraj: " . $posta_kraj . "\n\r" .
+            "Opis objekta: \n" . $opis_objekta . "\n\r" .
+            "Lep pozdrav, www.krovstvo-strozer.si";
+
+    $ok = mail($to,$subject,$txt);
+
+    if($ok){
+        header("Location: povprasevanje_sent.php?status=1");
+        exit();
+    }else{
+        header("Location: povprasevanje_sent.php?status=0");
+        exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="sl">
 <head>
@@ -29,16 +64,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand-centered"><img src="res/logotip.png" width="200" height="169" class="logo-img" alt="logotip"></div>
+            <div class="navbar-brand-centered"><img src="res/logotip.png" width="200" height="169" class="logo-img"></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-brand-centered">
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Domov</a></li>
-                <li class="active"><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="galerija.php">Galerija</a></li>
-                <li><a href="povprasevanje.php">Povpraševanje</a></li>
+                <li class="active"><a href="povprasevanje.html">Povpraševanje</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://www.facebook.com/strozer.kleparstvomontaza" target="_blank"><i class="fab fa-facebook-square fa-1x"></i></a></li>
@@ -48,26 +83,51 @@
     </div>
 </nav></div>
 
-<!-- Sredinska sekcija -->
+<!-- NASLOV -->
+<h1 class="text-center">Menjavate streho in želite prejeti ponudbo?</h1>
+<h4 class="text-center" style="color: dimgrey">Izpolnite obrazec za ponudbo.</h4>
+<!-- FORM -->
+<div class="form">
+    <div class="container">
+        <form action="" method="post">
+                <div class="form-group">
+                    <p style="color:red; float:right;">Vsi podatki so obvezni.</p>
+                    <label for="ime" style="margin-top: 25px;">Ime:</label>
+                    <input type="text" class="form-control" id="ime" name="ime" required minlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="priimek">Priimek:</label>
+                    <input type="text" class="form-control" id="priimek" name="priimek" required minlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefon:</label>
+                    <input type="tel" class="form-control" id="telefon" name="telefon" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <p>Oblika: 040-444-444</p>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+                </div>
+                <div class="form-group">
+                    <label for="naslov">Naslov:</label>
+                    <input type="text" class="form-control" id="naslov" name="naslov" required>
+                </div>
+                <div class="form-group">
+                    <label for="posta_kraj">Pošta in kraj:</label>
+                    <input type="text" class="form-control" id="posta_kraj" name="posta_kraj" required>
+                </div>
 
-<!-- Sekcija na sredini strani z tekstom -->
-<div id="sredinska_sekcija">
-    <h2 class="text-center" style="margin-bottom: 5%;">Kontaktirajte nas in vam bomo z veseljem svetovali.</h2>
-    <h3 class="text-center"><i class="fas fa-phone-alt" style="margin-right: 25px;"></i> 040 - 803 - 652</h3>
-    <h3 class="text-center"><i class="fas fa-envelope-square fa-1x" style="margin-right: 25px;"></i> strozer.zan@gmail.com</h3>
-    <h3 class="text-center"><i class="fas fa-city" style="margin-right: 25px;"></i> Kasaze 69e, 3301 Petrovče</h3>
-</div>
+                <div class="form-group">
+                    <label for="opis_objekta">Opis objekta:</label>
+                    <textarea name="opis_objekta" class="form-control" id="opis_objekta" style="height: 125px" required></textarea>
+                </div>
 
-<!-- Google maps -->
-<div class="google-maps">
-    <div class="container-fluid">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.135261549372!2d15.194423515981123!3d46.22765477911747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47656e2857eb5555%3A0xb963c44f91cf5d3d!2sKasaze%2069e%2C%203301%20Petrov%C4%8De!5e0!3m2!1sen!2ssi!4v1596286641105!5m2!1sen!2ssi"
-                    width="950" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
+                <div class="form-group">
+                    <input type="submit" name="poslji" class="form-control" value="Pošlji povpraševanje." style="background-color: #e3e3e3; font-weight: bold; color: black; width: 200px;">
+                </div>
+
+        </form>
     </div>
 </div>
-
 
 </body>
 
