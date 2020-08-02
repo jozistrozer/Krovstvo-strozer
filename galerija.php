@@ -14,6 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/galerija.css">
+    <script src="js/main.js"></script>
+
 
 </head>
 <body>
@@ -36,7 +39,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
-                <li class="active"><a href="galerija.html">Galerija</a></li>
+                <li class="active"><a href="galerija.php">Galerija</a></li>
                 <li><a href="povprasevanje.html">Povpraševanje</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -47,10 +50,27 @@
     </div>
 </nav></div>
 
+<!-- Galerija -->
+<div class="container-fluid-gallery">
+    <div class="gallery-container">
+    <?php
+        foreach(glob('res/galerija/*.*') as $file) {
+            echo "<div class='img-container'>";
+            echo "<img src='".$file."' alt='Strožer, Kleparstvo In Montaža, Žan Strožer S.p.' onclick='OpenPicture(\"$file\");'>";
+            echo "</div>";
+        }
+    ?>
+    </div>
+</div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="#" alt="Strožer, Kleparstvo In Montaža, Žan Strožer S.p." id="modal-slika" style="width: 650px; height: 650px; margin-top: 25px;">
+  </div>
 
-
-
+</div>
 
 </body>
 
@@ -64,4 +84,7 @@
         </div>
     </nav>
 </footer>
+
+<script src="js/galerija.js"></script>
+
 </html>
