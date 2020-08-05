@@ -84,9 +84,6 @@ echo "<h3 class='text-center' style='color: red;margin-bottom: 25%;'><a href='po
         <div class="partner">
             <a href="http://www.fakro.si/" target="_blank"><img src="res/partnerji/fakro.jpg" alt="Fakro" style="height: 50px"></a>
         </div>
-        <div class="partner">
-            <a href="http://www.indap.si/" target="_blank"><img src="res/partnerji/indap.jpg" alt="Indap SKM"></a>
-        </div>
     </div>
     <nav class="navbar navbar-inverse" id="noga">
         <div class="container-fluid">
