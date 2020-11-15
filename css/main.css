@@ -80,7 +80,10 @@
 }
 
 .carousel-inner > .item > a > img, .carousel-inner > .item > img{
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .zagotavljamo-tabela > tbody > tr > td > img{
@@ -236,5 +239,3 @@ hr.crta {
 .sredinska_sekcija > i {
     margin-right: 25px;
 }
-
-

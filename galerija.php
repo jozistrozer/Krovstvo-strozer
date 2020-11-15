@@ -49,14 +49,40 @@
         </div>
     </div>
 </nav></div>
-
 <h2 class="text-center" style="margin-bottom: 55px;">Oglejte si nekaj naših izdelkov.</h2>
-
-<!-- Galerija -->
+<!-- Galerija ostali izdelki-->
 <div class="container-fluid-gallery">
     <div class="gallery-container">
     <?php
         foreach(glob('res/galerija/*.*') as $file) {
+            echo "<div class='img-container'>";
+            echo "<img src='".$file."' alt='Strožer, Kleparstvo In Montaža, Žan Strožer S.p.' onclick='OpenPicture(\"$file\");'>";
+            echo "</div>";
+        }
+    ?>
+    </div>
+</div>
+<hr class="crta">
+<h2 class="text-center" style="margin-bottom: 55px;">Primerjava. <span style="color: grey;font-size: 15px;">staro / novo</span></h2>
+<!-- Galerija primerjava -->
+<div class="container-fluid-gallery">
+    <div class="gallery-container">
+    <?php
+        foreach(glob('res/galerija/primerjava/*.*') as $file) {
+            echo "<div class='img-container'>";
+            echo "<img src='".$file."' alt='Strožer, Kleparstvo In Montaža, Žan Strožer S.p.' onclick='OpenPicture(\"$file\");'>";
+            echo "</div>";
+        }
+    ?>
+    </div>
+</div>
+<hr class="crta">
+<h2 class="text-center" style="margin-bottom: 55px;">Vgradnja velux strešnih oken.</h2>
+<!-- Strešna okna -->
+<div class="container-fluid-gallery">
+    <div class="gallery-container">
+    <?php
+        foreach(glob('res/galerija/stresnaokna/*.*') as $file) {
             echo "<div class='img-container'>";
             echo "<img src='".$file."' alt='Strožer, Kleparstvo In Montaža, Žan Strožer S.p.' onclick='OpenPicture(\"$file\");'>";
             echo "</div>";
